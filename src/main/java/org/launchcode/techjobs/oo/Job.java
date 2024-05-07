@@ -95,4 +95,24 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+    public String toString() {
+        String format = String.format(
+                "%n" +
+                "ID: %d%n" +
+                        "Name: %s%n" +
+                        "Employer: %s%n" +
+                        "Location: %s%n" +
+                        "Position Type: %s%n" +
+                        "Core Competency: %s%n%n",
+                getId(),
+                getName() != null ? getName() : "Data not available",
+                getEmployer() != null ? getEmployer().getValue() : "Data not available",
+                getLocation() != null ? getLocation().getValue() : "Data not available",
+                getPositionType() != null ? getPositionType().getValue() : "Data not available",
+                getCoreCompetency() != null ? getCoreCompetency().getValue() : "Data not available"
+        );
+        return format;
+    }
+
 }
