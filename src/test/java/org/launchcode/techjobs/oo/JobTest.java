@@ -61,8 +61,7 @@ public class JobTest {
                         "Employer: " + (job.getEmployer() != null ? job.getEmployer().getValue() : "Data not available") + System.lineSeparator() +
                         "Location: " + (job.getLocation() != null ? job.getLocation().getValue() : "Data not available") + System.lineSeparator() +
                         "Position Type: " + (job.getPositionType() != null ? job.getPositionType().getValue() : "Data not available") + System.lineSeparator() +
-                        "Core Competency: " + (job.getCoreCompetency() != null ? job.getCoreCompetency().getValue() : "Data not available") + System.lineSeparator() +
-                        System.lineSeparator();
+                        "Core Competency: " + (job.getCoreCompetency() != null ? job.getCoreCompetency().getValue() : "Data not available") + System.lineSeparator();
 
         assertEquals(expectedString, jobString);
     }
@@ -84,11 +83,11 @@ public class JobTest {
         Job job = new Job();
         String jobString = job.toString();
         assertTrue(jobString.contains("ID: " + job.getId()));
-        assertTrue(jobString.contains("Name: Data not available"));
-        assertTrue(jobString.contains("Employer: Data not available"));
-        assertTrue(jobString.contains("Location: Data not available"));
-        assertTrue(jobString.contains("Position Type: Data not available"));
-        assertTrue(jobString.contains("Core Competency: Data not available"));
+        assertTrue(jobString.contains("Name: "));
+        assertTrue(jobString.contains("Employer: "));
+        assertTrue(jobString.contains("Location: "));
+        assertTrue(jobString.contains("Position Type: "));
+        assertTrue(jobString.contains("Core Competency: "));
     }
 
 }

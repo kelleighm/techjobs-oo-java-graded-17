@@ -98,13 +98,13 @@ public class Job {
 
     public String toString() {
         String format = String.format(
-                "%n" +
-                "ID: %d%n" +
+                        "%n" +
+                        "ID: %d%n" +
                         "Name: %s%n" +
                         "Employer: %s%n" +
                         "Location: %s%n" +
                         "Position Type: %s%n" +
-                        "Core Competency: %s%n%n",
+                        "Core Competency: %s%n",
                 getId(),
                 getName() != null ? getName() : "Data not available",
                 getEmployer() != null ? getEmployer().getValue() : "Data not available",
@@ -114,5 +114,4 @@ public class Job {
         );
         return format;
     }
-
 }
