@@ -55,41 +55,40 @@ public class Job {
         return id;
     }
 
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public Employer getEmployer() {
         return employer;
     }
 
-    public void setEmployer(Employer employer) {
-        this.employer = employer;
-    }
-
     public Location getLocation() {
         return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
     }
 
     public PositionType getPositionType() {
         return positionType;
     }
 
-    public void setPositionType(PositionType positionType) {
-        this.positionType = positionType;
-    }
-
     public CoreCompetency getCoreCompetency() {
         return coreCompetency;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmployer(Employer employer) {
+        this.employer = employer;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public void setPositionType(PositionType positionType) {
+        this.positionType = positionType;
     }
 
     public void setCoreCompetency(CoreCompetency coreCompetency) {
@@ -106,11 +105,11 @@ public class Job {
                         "Position Type: %s%n" +
                         "Core Competency: %s%n",
                 getId(),
-                getName() != null ? getName() : "Data not available",
-                getEmployer() != null ? getEmployer().getValue() : "Data not available",
-                getLocation() != null ? getLocation().getValue() : "Data not available",
-                getPositionType() != null ? getPositionType().getValue() : "Data not available",
-                getCoreCompetency() != null ? getCoreCompetency().getValue() : "Data not available"
+                (getName() != null && !getName().isEmpty()) ? getName() : "Data not available",
+                (getEmployer() != null && !getEmployer().getValue().isEmpty()) ? getEmployer() : "Data not available",
+                (getLocation() != null && !getLocation().getValue().isEmpty()) ? getLocation() : "Data not available",
+                (getPositionType() != null && !getPositionType().getValue().isEmpty()) ? getPositionType() : "Data not available",
+                (getCoreCompetency() != null && !getCoreCompetency().getValue().isEmpty()) ? getCoreCompetency() : "Data not available"
         );
         return format;
     }
